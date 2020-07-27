@@ -9,10 +9,10 @@ pinBtn.addEventListener("click", function(){
           let success = document.getElementById("success");
           success.style.display = "none";       
           
-})
+});
  document.getElementById("pinInput").value = "";
 
-const submitInput = document.getElementById("submitInput");
+let submitInput = document.getElementById("submitInput");
 function showValue(data) {
           switch (data) {
                     case 'c':
@@ -58,4 +58,4 @@ submitBtn.addEventListener("click", function(){
                    
           }
           
-})
+});
