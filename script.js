@@ -6,7 +6,7 @@ pinBtn.addEventListener("click", function(){
           document.getElementById("pinInput").value = newPin;       
           
 })
-document.getElementById("pinInput").value = "";
+ document.getElementById("pinInput").value = "";
 
 let submitInput = document.getElementById("submitInput");
 function calculate(data) {
@@ -26,3 +26,29 @@ function calculate(data) {
           
 }
 document.getElementById("submitInput").value = "";
+
+
+const submitBtn =document.getElementById("apply");
+submitBtn.addEventListener("click", function(){
+           let pinInput =  document.getElementById("pinInput").value;
+          let submitInput = document.getElementById("submitInput").value;
+          if (submitInput == pinInput) {
+                    let success = document.getElementById("success");
+                     success.style.display = "block";
+                     let fail = document.getElementById("fail");
+                     fail.style.display = " none";
+                     document.getElementById("submitInput").value = "";
+                     document.getElementById("pinInput").value = "";
+
+                    
+          }
+          else{
+                    let fail = document.getElementById("fail");
+                    fail.style.display = " block";
+                    let success = document.getElementById("success");
+                    success.style.display = "none";
+                    document.getElementById("submitInput").value = "";
+                    document.getElementById("pinInput").value = "";
+
+          }
+})
