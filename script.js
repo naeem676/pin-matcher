@@ -9,7 +9,7 @@ pinBtn.addEventListener("click", function(){
  document.getElementById("pinInput").value = "";
 
 let submitInput = document.getElementById("submitInput");
-function calculate(data) {
+function showValue(data) {
           switch (data) {
                     case 'c':
                               submitInput.value = "";
@@ -40,6 +40,7 @@ submitBtn.addEventListener("click", function(){
                      document.getElementById("submitInput").value = "";
                      document.getElementById("pinInput").value = "";
 
+                    
                     
           }
           else{
