@@ -10,15 +10,15 @@
 <body>
     <div class="container ">
         <div class="row">
-            <div  class="col-md-6">
+            <div id="pin-area" class="col-md-6">
                 <div class="pin-generator half-width">
-                    <input id="pinInput" class="form-control" type="text">
+                    <input id="pinInput" class="form-control" type="text" placeholder="____">
                     <button id="pinBtn" class="generate-btn">Generate Pin</button>
                 </div>
             </div>
-            <div  class="col-md-6">
+            <div id="submit-area"  class="col-md-6">
                 <div class="input-section half-width" >
-                    <input id="submitInput" class="form-control" type="text">
+                    <input id="submitInput" class="form-control" type="text" placeholder="____">
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row" >
@@ -43,7 +43,7 @@
                             </div>
                             <div>
                                 <button id="apply" type="submit" class="submit-btn">Submit</button>
-                                <p class="action-left">3 try left</p>
+                                <p id="action" class="action-left"><span id="tryLeft">3</span> try left</p>
                             </div>
                     </div>
                 </div>

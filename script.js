@@ -3,12 +3,16 @@ pinBtn.addEventListener("click", function(){
           
           
           const newPin =  Math.floor(Math.random() * (2000 - 1001)) +  1001;
-          document.getElementById("pinInput").value = newPin;       
+          document.getElementById("pinInput").value = newPin;
+          let fail = document.getElementById("fail");
+          fail.style.display = " none";
+          let success = document.getElementById("success");
+          success.style.display = "none";       
           
 })
  document.getElementById("pinInput").value = "";
 
-let submitInput = document.getElementById("submitInput");
+const submitInput = document.getElementById("submitInput");
 function showValue(data) {
           switch (data) {
                     case 'c':
@@ -32,17 +36,18 @@ const submitBtn =document.getElementById("apply");
 submitBtn.addEventListener("click", function(){
            let pinInput =  document.getElementById("pinInput").value;
           let submitInput = document.getElementById("submitInput").value;
-          if (submitInput == pinInput) {
+          if (submitInput === pinInput) {
                     let success = document.getElementById("success");
-                     success.style.display = "block";
-                     let fail = document.getElementById("fail");
-                     fail.style.display = " none";
-                     document.getElementById("submitInput").value = "";
-                     document.getElementById("pinInput").value = "";
-
-                    
-                    
+                    success.style.display = "block";
+                    let fail = document.getElementById("fail");
+                    fail.style.display = " none";
+                    document.getElementById("submitInput").value = "";
+                    document.getElementById("pinInput").value = "";
+                        
           }
+                    
+          
+
           else{
                     let fail = document.getElementById("fail");
                     fail.style.display = " block";
@@ -50,6 +55,7 @@ submitBtn.addEventListener("click", function(){
                     success.style.display = "none";
                     document.getElementById("submitInput").value = "";
                     document.getElementById("pinInput").value = "";
-
+                   
           }
+          
 })
