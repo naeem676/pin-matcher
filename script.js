@@ -11,9 +11,9 @@ pinBtn.addEventListener("click", function(){
           
 });
  document.getElementById("pinInput").value = "";
-
-let submitInput = document.getElementById("submitInput");
+         
 function showValue(data) {
+          let submitInput = document.getElementById("submitInput");
           switch (data) {
                     case 'c':
                               submitInput.value = "";
@@ -24,8 +24,11 @@ function showValue(data) {
           
                     default:
                               submitInput.value += data;
+                    
                               break;
           }
+          
+
 
           
 }
@@ -34,28 +37,31 @@ document.getElementById("submitInput").value = "";
 
 const submitBtn =document.getElementById("apply");
 submitBtn.addEventListener("click", function(){
-           let pinInput =  document.getElementById("pinInput").value;
+          let pinInput =  document.getElementById("pinInput").value;
           let submitInput = document.getElementById("submitInput").value;
-          if (submitInput === pinInput) {
+          if (submitInput === pinInput && submitInput.length > 0 && pinInput.length > 0 ) {
                     let success = document.getElementById("success");
                     success.style.display = "block";
-                    let fail = document.getElementById("fail");
-                    fail.style.display = " none";
                     document.getElementById("submitInput").value = "";
                     document.getElementById("pinInput").value = "";
                         
-          }
-                    
-          
-
-          else{
+          }  else if (submitInput !== pinInput) {
                     let fail = document.getElementById("fail");
                     fail.style.display = " block";
-                    let success = document.getElementById("success");
-                    success.style.display = "none";
                     document.getElementById("submitInput").value = "";
                     document.getElementById("pinInput").value = "";
+                    
+          }
+          else { let success = document.getElementById("success");
+                    success.style.display = "none";
+                    let fail = document.getElementById("fail");
+                    fail.style.display = "none";
+                    
                    
           }
+                   
+          
           
 });
+
+
